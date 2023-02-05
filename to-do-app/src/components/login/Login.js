@@ -53,6 +53,7 @@ function Login() {
         content:
           'Logged in successfully',
         async onOk() {
+          
           try {
             return new Promise((resolve, reject) => {
               setTimeout(Math.random() > 0.5 ? resolve : reject, 1000);
@@ -95,7 +96,6 @@ function Login() {
           visible={isModalVisible}
           onOk={() => {
             setIsModalVisible(false)
-            
           }}
           onCancel={() => {
             setIsModalVisible(false);

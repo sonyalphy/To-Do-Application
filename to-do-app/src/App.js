@@ -1,21 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Login from './components/login/Login';
-import ToDo from './components/ToDo/todo';
+import MainRoutes from './Pages/MainRoutes';
+import { Container } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/todo" element={<ToDo />}>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-     
-    </div>
+    <Container minWidth="6xl">
+      <MainRoutes/>
+      </Container>
   );
 }
 
